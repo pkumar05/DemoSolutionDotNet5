@@ -3,3 +3,25 @@
 ################################################################################
 
 /.vs
+/API/API.DemoSolutions/.vs
+/API/API.DemoSolutions/bin/Debug/net5.0
+/API/API.DemoSolutions/obj
+/API/API.DemoSolutions/logs20220812.txt
+/API/API.DemoSolutions/logs20220811.txt
+/API/API.DemoSolutions/logs20220810.txt
+/ApplicationServices/DS.ApplicationServices/bin/Debug/net5.0
+/ApplicationServices/DS.ApplicationServices/obj
+/Database/DS.DB/bin/Debug
+/Database/DS.DB/obj/Debug
+/Database/DS.DB/DS.DB.sqlproj.user
+/Database/DS.DB/DS.DB.jfm
+/Database/DS.DB/DS.DB.dbmdl
+/Domain/DS.Domain/bin/Debug/net5.0
+/Domain/DS.Domain/obj
+/Infrastructure/DS.Infrastructure/bin/Debug/net5.0
+/Infrastructure/DS.Infrastructure/obj
+/ServiceInterfaces/DS.ServicesInterfaces/bin/Debug/net5.0
+/ServiceInterfaces/DS.ServicesInterfaces/obj
+/UnitTest/DS.Test/bin/Debug/net5.0
+/UnitTest/DS.Test/obj
+/Database/DS.DB/Import Schema Logs
