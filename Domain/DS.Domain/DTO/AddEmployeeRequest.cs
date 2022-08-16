@@ -1,10 +1,6 @@
-﻿using PK.BuildingBlocks.Infrastructure;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace DS.Domain.Entities
+﻿namespace DS.Domain.DTO
 {
-    [Table("Employee", Schema = "DS")]
-    public class Employee : BaseEntity
+    public class AddEmployeeRequest
     {
         /// <summary>
         /// 
@@ -21,7 +17,7 @@ namespace DS.Domain.Entities
         /// <summary>
         /// 
         /// </summary>
-        public int EmployeeID { get; set; }
+       // public int EmployeeID { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -41,18 +37,28 @@ namespace DS.Domain.Entities
         /// <summary>
         /// 
         /// </summary>
-        public string Description { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public bool IsGoldMember { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public bool IsDiamondMember { get; set; }
+        public Data Data { get; set; }
         /// <summary>
         /// 
         /// </summary>
         public bool Active { get; set; }
+    }
+
+    public class Data { }
+
+    public class UpdateEmpoyeeRequest : AddEmployeeRequest
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Id { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        private new bool Active { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        private new string CurrentTitle { get; set; }
     }
 }

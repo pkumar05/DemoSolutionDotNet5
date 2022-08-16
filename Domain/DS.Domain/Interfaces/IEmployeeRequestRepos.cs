@@ -3,7 +3,7 @@ using PK.BuildingBlocks.Infrastructure;
 
 namespace DS.Domain.Interfaces
 {
-    public interface IEmployeeRequestRepos : IRepository<Employee>
+    public interface IEmployeeRequestRepos : IRepository<Employees>
     {
     }
 }

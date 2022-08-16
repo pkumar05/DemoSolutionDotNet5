@@ -18,7 +18,7 @@ namespace API.DemoSolutions.DependancyConfig
         private IServiceCollection _services;
         private IConfiguration _configuration;
 
-        public DependancyConfig (IServiceCollection services, IConfiguration configuration)
+        public DependancyConfig(IServiceCollection services, IConfiguration configuration)
         {
             _services = services;
             _configuration = configuration;
@@ -39,11 +39,10 @@ namespace API.DemoSolutions.DependancyConfig
         /// </summary>
         private void AddDependencyValidator()
         {
-            #region Commented Codes
             _services.AddScoped<IValidator<AddDepartmentRequest>, AddDepartmentValidatorRequest>();
-            //_services.AddScoped<IValidator<CompanyRequest>, CompanyRequestValidator>();
+            _services.AddScoped<IValidator<AddProfileRequest>, AddProfileValidatorRequest>();
+            _services.AddScoped<IValidator<AddEmployeeRequest>, AddEmployeeValidatorRequest>();
 
-            #endregion
 
         }
         /// <summary>
@@ -56,7 +55,10 @@ namespace API.DemoSolutions.DependancyConfig
             _services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
 
             _services.AddScoped<IDepartmentsRequestRepos, DepartmentsRequestRepository>();
-            
+            _services.AddScoped<IProfileRequestRepos, ProfileRequestRepository>();
+            _services.AddScoped<IEmployeeRequestRepos, EmployeeRequestRepository>();
+            _services.AddScoped<IEmployeeProfileRequestRepos, EmployeeProfileRequestRepository>();
+
 
         }
 

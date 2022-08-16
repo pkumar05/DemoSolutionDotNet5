@@ -1,0 +1,121 @@
+2022-08-15 11:42:29.435 +04:00 [INF] starting web host
+2022-08-15 11:42:44.526 +04:00 [INF] Started --Log Of Master--> GetDepartmentList method 
+2022-08-15 12:07:06.551 +04:00 [INF] starting web host
+2022-08-15 12:07:07.306 +04:00 [FTL] Host Terminated unexpectedly.
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: DS.ServicesInterfaces.IMasterService Lifetime: Scoped ImplementationType: DS.ApplicationServices.MasterService': Unable to resolve service for type 'DS.Domain.Interfaces.IEmployeeProfileRequestRepos' while attempting to activate 'DS.ApplicationServices.MasterService'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: DS.ServicesInterfaces.IMasterService Lifetime: Scoped ImplementationType: DS.ApplicationServices.MasterService': Unable to resolve service for type 'DS.Domain.Interfaces.IEmployeeProfileRequestRepos' while attempting to activate 'DS.ApplicationServices.MasterService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'DS.Domain.Interfaces.IEmployeeProfileRequestRepos' while attempting to activate 'DS.ApplicationServices.MasterService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at API.DemoSolutions.Program.Main(String[] args) in C:\Solutions\DemoSolutionDotNET5\API\API.DemoSolutions\Program.cs:line 46
+2022-08-15 12:11:01.432 +04:00 [INF] starting web host
+2022-08-15 12:16:39.423 +04:00 [INF] starting web host
+2022-08-15 12:41:59.679 +04:00 [INF] starting web host
+2022-08-15 12:42:57.269 +04:00 [INF] starting web host
+2022-08-15 13:28:08.347 +04:00 [INF] starting web host
+2022-08-15 13:28:18.283 +04:00 [INF] Started --Log Of Master--> GetDepartmentList method 
+2022-08-15 13:28:27.964 +04:00 [INF] Started --Log Of Master--> GetDepartmentList method 
+2022-08-15 13:28:35.988 +04:00 [INF] Started --Log Of Master--> GetDepartmentList method 
+2022-08-15 13:50:05.626 +04:00 [INF] starting web host
+2022-08-15 13:50:16.566 +04:00 [INF] Started --Log Of Master--> GetDepartmentList method 
+2022-08-15 13:50:24.126 +04:00 [INF] Started --Log Of Master--> GetDepartmentList method 
+2022-08-15 13:50:30.952 +04:00 [INF] Started --Log Of Master--> GetDepartmentList method 
+2022-08-15 13:58:12.013 +04:00 [INF] starting web host
+2022-08-15 14:34:35.625 +04:00 [INF] starting web host
+2022-08-15 14:35:56.882 +04:00 [INF] Started --Log Of Master--> AddProfile method 
+2022-08-15 14:36:22.717 +04:00 [INF] Started --Log Of Master--> AddProfile method 
+2022-08-15 14:36:43.326 +04:00 [INF] Started --Log Of Master--> AddProfile method 
+2022-08-15 14:36:48.402 +04:00 [INF] Started --Log Of Master--> GetProfileList method 
+2022-08-15 14:37:10.946 +04:00 [INF] Started --Log Of Master--> GetProfileList method 
+2022-08-15 14:37:57.140 +04:00 [INF] Started --Log Of Master--> UpdateProfile method 
+2022-08-15 14:38:03.842 +04:00 [INF] Started --Log Of Master--> GetProfileList method 
+2022-08-15 14:58:53.299 +04:00 [INF] starting web host
+2022-08-15 15:34:10.032 +04:00 [INF] starting web host
+2022-08-15 15:36:56.644 +04:00 [INF] Started --Log Of Master--> AddEmployee method 
+2022-08-15 15:37:33.232 +04:00 [ERR] Failed executing DbCommand (27ms) [Parameters=[@__request_FirstName_0='?' (Size = 4000), @__request_LastName_1='?' (Size = 4000), @__request_Email_2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Active], [e].[CreatedBy], [e].[CreatedDate], [e].[CurrentTitle], [e].[Data], [e].[Email], [e].[EmployeeID], [e].[FirstName], [e].[HomeAddress], [e].[LastName], [e].[MiddleName], [e].[Phone], [e].[UpdatedBy], [e].[UpdatedDate]
+FROM [DS].[Employee] AS [e]
+WHERE (([e].[Active] = CAST(1 AS bit)) AND ([e].[FirstName] = @__request_FirstName_0)) AND ((CASE
+    WHEN ([e].[LastName] = @__request_LastName_1) AND [e].[LastName] IS NOT NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END & CASE
+    WHEN ([e].[Email] = @__request_Email_2) AND [e].[Email] IS NOT NULL THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END) = CAST(1 AS bit))
+2022-08-15 15:37:33.271 +04:00 [ERR] An exception occurred while iterating over the results of a query for context type 'DS.Infrastructure.SQL.Data.DADBContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'DS.Employee'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:9b7707d6-8d18-49e2-b2ba-fef1218e1ec5
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'DS.Employee'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:9b7707d6-8d18-49e2-b2ba-fef1218e1ec5
+Error Number:208,State:1,Class:16
+2022-08-15 15:38:11.599 +04:00 [INF] starting web host
+2022-08-15 15:43:41.005 +04:00 [INF] starting web host
+2022-08-15 15:45:28.876 +04:00 [INF] starting web host
+2022-08-15 15:48:10.122 +04:00 [INF] Started --Log Of Master--> AddEmployee method 
+2022-08-15 15:49:52.226 +04:00 [INF] Started --Log Of Master--> AddEmployee method 
+2022-08-15 15:50:41.466 +04:00 [ERR] Error: Log Of Master-->AddEmployee method Error:
+2022-08-15 15:51:46.767 +04:00 [INF] Started --Log Of Master--> AddEmployee method 
+2022-08-15 15:52:42.242 +04:00 [INF] Started --Log Of Master--> AddEmployee method 
+2022-08-15 15:56:42.690 +04:00 [INF] starting web host
+2022-08-15 15:59:16.194 +04:00 [INF] starting web host
+2022-08-15 16:01:40.581 +04:00 [INF] starting web host
+2022-08-15 16:02:26.098 +04:00 [INF] Started --Log Of Master--> AddEmployee method 
+2022-08-15 16:06:47.645 +04:00 [INF] starting web host
+2022-08-15 16:07:29.483 +04:00 [INF] Started --Log Of Master--> AddEmployee method 
+2022-08-15 16:09:03.281 +04:00 [INF] Started --Log Of Master--> GetEmployeeList method 
+2022-08-15 16:09:03.310 +04:00 [ERR] Error: Log Of Master-->GetEmployeeList method Error:
+2022-08-15 16:18:14.923 +04:00 [INF] starting web host
+2022-08-15 16:18:21.508 +04:00 [INF] Started --Log Of Master--> GetEmployeeList method 
+2022-08-15 16:18:33.061 +04:00 [INF] Started --Log Of Master--> GetEmployeeList method 
+2022-08-15 16:19:23.807 +04:00 [INF] starting web host
+2022-08-15 16:19:33.070 +04:00 [INF] Started --Log Of Master--> GetEmployeeList method 
+2022-08-15 16:19:50.035 +04:00 [INF] Started --Log Of Master--> GetEmployeeList method 
+2022-08-15 16:21:31.866 +04:00 [INF] starting web host

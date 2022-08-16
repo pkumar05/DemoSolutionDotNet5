@@ -13,7 +13,7 @@ namespace DS.Infrastructure.SQL.Data
         }
 
         public virtual DbSet<Departments> CustomerOrders { get; set; }
-        public virtual DbSet<Employee> Customers { get; set; }
+        public virtual DbSet<Employees> Customers { get; set; }
         public virtual DbSet<EmployeeProfile> Orders { get; set; }
         public virtual DbSet<Profile> Products { get; set; }
 
@@ -26,7 +26,7 @@ namespace DS.Infrastructure.SQL.Data
                 throw new ArgumentNullException(nameof(modelBuilder));
             }
 
-
+            #region Commented Codes
             //modelBuilder.Entity<AD_AIRCRAFTS>(entity =>
             //{
             //    //entity.ToTable("IM_GROUPS_PROFILES", "IM");
@@ -41,77 +41,8 @@ namespace DS.Infrastructure.SQL.Data
 
             //});
 
-            #region Configure based on commented line
-            //modelBuilder.Entity<IM_USERS_GROUPS>(entity =>
-            //{
-            //    entity.HasOne(d => d.Group)
-            //          .WithMany(p => p.ImUsersGroups)
-            //          .HasForeignKey(d => d.Group_ID);
-
-            //    entity.HasOne(d => d.User)
-            //        .WithMany(p => p.ImUsersGroups)
-            //        .HasForeignKey(d => d.User_Name);
-            //});
-
-            //modelBuilder.Entity<IM_GROUPS_PERMISSIONS>(entity =>
-            //{
-            //    entity.HasOne(d => d.Group)
-            //        .WithMany(p => p.ImRequestPermissions)
-            //        .HasForeignKey(d => d.GROUP_ID);
-
-            //    entity.HasOne(d => d.Permission)
-            //        .WithMany(p => p.ImRequestPermissions)
-            //        .HasForeignKey(d => d.PERMISSION_ID);
-
-            //    entity.HasOne(d => d.ScreenAction)
-            //        .WithMany(p => p.ImRequestPermissions)
-            //        .HasForeignKey(d => d.SCREEN_ACTION_ID);
-
-            //    entity.HasOne(d => d.Service)
-            //        .WithMany(p => p.ImRequestPermissions)
-            //        .HasForeignKey(d => d.SERVICE_ID);
-
-            //    entity.HasOne(d => d.SubService)
-            //        .WithMany(p => p.ImRequestPermissions)
-            //        .HasForeignKey(d => d.SUB_SERVICE_ID);
-            //});
-
-            //modelBuilder.Entity<IM_SUB_SERVICES>(entity =>
-            //{
-            //    entity.HasOne(d => d.Service)
-            //   .WithMany(p => p.ImSubServices)
-            //   .HasForeignKey(d => d.Service_ID);
-            //});
-
-            //modelBuilder.Entity<IM_SCREEN_ACTIONS>(entity =>
-            //{
-            //    entity.HasOne(d => d.SubService)
-            //    .WithMany(p => p.ImScreenActions)
-            //    .HasForeignKey(d => d.Sub_Service_ID);
-            //});
-
-            //modelBuilder.Entity<IM_GROUPS_OU>(entity =>
-            //{
-
-            //    entity.HasOne(d => d.Group)
-            //        .WithMany(p => p.ImGroupsOu)
-            //        .HasForeignKey(d => d.GROUP_ID);
-
-            //    entity.HasOne(d => d.Ou)
-            //        .WithMany(p => p.ImGroupsOu)
-            //        .HasForeignKey(d => d.OU_ID);
-            //});
-
-            //modelBuilder.Entity<IM_OU>(entity =>
-            //{
-
-            //    entity.HasOne(d => d.Company)
-            //        .WithMany(p => p.ImOu)
-            //        .HasForeignKey(d => d.Company_Id);
-
-            //});
-
             #endregion
+
         }
 
     }

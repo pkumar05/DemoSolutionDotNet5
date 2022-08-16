@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DS.Domain.DTO
+﻿namespace DS.Domain.DTO
 {
-    public  class AddDepartmentRequest
+    public class AddDepartmentRequest
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public string Name { get; set; }
         /// <summary>
         /// 
@@ -25,8 +22,13 @@ namespace DS.Domain.DTO
 
     public class UpdateDepartmentRequest : AddDepartmentRequest
     {
-        public string Id { get; set; } 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Id { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         private new bool Active { get; set; }
     }
 }

@@ -1,14 +1,7 @@
-﻿using PK.BuildingBlocks.Infrastructure;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace DS.Domain.Entities
+﻿namespace DS.Domain.DTO
 {
-    [Table("Profile", Schema = "DS")]
-    public class Profile : BaseEntity
+    public class AddProfileRequest
     {
-        /// <summary>
-        /// 
-        /// </summary>
         public string Name { get; set; }
         /// <summary>
         /// 
@@ -22,5 +15,12 @@ namespace DS.Domain.Entities
         /// 
         /// </summary>
         public bool Active { get; set; }
+    }
+
+    public class UpdateProfileRequest : AddProfileRequest
+    {
+        public string Id { get; set; }
+
+        private new bool Active { get; set; }
     }
 }

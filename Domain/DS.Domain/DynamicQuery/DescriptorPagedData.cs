@@ -1,10 +1,5 @@
-﻿using DS.Domain.Interfaces;
-using PK.BuildingBlocks.Infrastructure;
-using System;
+﻿using PK.BuildingBlocks.Infrastructure;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DS.Domain.DynamicQuery
 {

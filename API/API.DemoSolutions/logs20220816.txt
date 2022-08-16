@@ -1,0 +1,27 @@
+2022-08-16 11:11:58.913 +04:00 [INF] starting web host
+2022-08-16 11:12:15.872 +04:00 [INF] Started --Log Of Master--> GetEmployeeList method 
+2022-08-16 11:12:38.934 +04:00 [INF] Started --Log Of Master--> GetEmployeeList method 
+2022-08-16 11:51:01.830 +04:00 [INF] starting web host
+2022-08-16 11:51:17.393 +04:00 [INF] Started --Log Of Master--> GetEmployeeList method 
+2022-08-16 11:52:46.463 +04:00 [INF] Started --Log Of Master--> UpdateEmployee method 
+2022-08-16 12:06:22.020 +04:00 [INF] starting web host
+2022-08-16 12:09:47.444 +04:00 [INF] starting web host
+2022-08-16 12:10:05.084 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Endpoint API.DemoSolutions.Controllers.MasterController.GetEmployeeList (API.DemoSolutions) contains CORS metadata, but a middleware was not found that supports CORS.
+Configure your application startup by adding app.UseCors() inside the call to Configure(..) in the application startup code. The call to app.UseCors() must appear between app.UseRouting() and app.UseEndpoints(...).
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingCorsMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.UseExtensions.<>c__DisplayClass0_2.<Use>b__2()
+   at API.DemoSolutions.Startup.<>c.<<Configure>b__5_1>d.MoveNext() in C:\Solutions\DemoSolutionDotNET5\API\API.DemoSolutions\Startup.cs:line 157
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-08-16 12:10:53.550 +04:00 [INF] starting web host
+2022-08-16 12:10:59.327 +04:00 [INF] Started --Log Of Master--> GetEmployeeList method 
+2022-08-16 12:13:03.620 +04:00 [INF] Started --Log Of Master--> UpdateEmployee method 
+2022-08-16 12:14:00.885 +04:00 [INF] Started --Log Of Master--> UpdateEmployee method 
+2022-08-16 12:25:19.090 +04:00 [INF] starting web host
+2022-08-16 12:25:25.932 +04:00 [INF] starting web host
+2022-08-16 12:25:32.605 +04:00 [INF] Started --Log Of Master--> GetEmployeeList method 

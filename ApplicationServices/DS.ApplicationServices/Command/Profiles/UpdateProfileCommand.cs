@@ -1,11 +1,14 @@
 ﻿using DS.Domain.DTO;
 using DS.Domain.Entities;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace DS.ApplicationServices.Command
 {
-    public static class UpdateDepartmentCommand
+    public static class UpdateProfileCommand
     {
         /// <summary>
         /// Update command to add new department.
@@ -14,7 +17,7 @@ namespace DS.ApplicationServices.Command
         /// <param name="request"></param>
         /// <param name="createdBy"></param>
         /// <returns></returns>
-        internal static async Task<Departments> UpdateDepartment(Departments dept, UpdateDepartmentRequest request, string modifyBy)
+        internal static async Task<Profile> UpdateProfile(Profile dept, UpdateProfileRequest request, string modifyBy)
         {
 
             dept.Name = request.Name ?? dept.Name;

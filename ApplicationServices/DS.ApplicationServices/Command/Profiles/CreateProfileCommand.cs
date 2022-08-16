@@ -5,18 +5,18 @@ using System.Threading.Tasks;
 
 namespace DS.ApplicationServices.Command
 {
-    public static class CreateDepartmentCommand
+    public static class CreateProfileCommand
     {
         /// <summary>
-        /// Create command to add new department.
+        /// Create command to add new Profile.
         /// </summary>
         /// <param name="department"></param>
         /// <param name="request"></param>
         /// <param name="createdBy"></param>
         /// <returns></returns>
-        internal static async Task<Departments> CreateDepartment(AddDepartmentRequest request, string createdBy)
+        internal static async Task<Profile> CreateProfile(AddProfileRequest request, string createdBy)
         {
-            Departments department = new Departments
+            Profile profile = new Profile
             {
                 Id = Guid.NewGuid().ToString(),
                 Name = request.Name,
@@ -28,7 +28,7 @@ namespace DS.ApplicationServices.Command
 
             };
 
-            return await Task.Run(() => department);
+            return await Task.Run(() => profile);
 
         }
 

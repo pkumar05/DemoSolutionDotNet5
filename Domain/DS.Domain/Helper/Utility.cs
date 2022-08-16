@@ -1,10 +1,7 @@
 ﻿using DS.Domain.DTO;
 using FluentValidation.Results;
-using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
@@ -70,17 +67,5 @@ namespace DM.ApplicationServices.Helper
             return await Task.Run(() => isValidEmail);
         }
 
-        //public static Exchange.ExchangeService ConnectToLDAP(LoginRequest request, string url)
-        //{
-        //    Exchange.ExchangeService exchange = new Exchange.ExchangeService(Exchange.ExchangeVersion.Exchange2016);
-        //    exchange.Credentials = new Exchange.WebCredentials(request.UserName, request.Password, "ADP");
-        //    exchange.Url = new Uri(url);
-        //    return exchange;
-        //}
-        //public static async Task<Exchange.NameResolutionCollection> GetContactFromActiveDirectory(LoginRequest request, string url,string userName)
-        //{
-        //    var connection = ConnectToLDAP(request, url);
-        //    return await connection.ResolveName(userName, Exchange.ResolveNameSearchLocation.DirectoryOnly, true);
-        //}
     }
 }

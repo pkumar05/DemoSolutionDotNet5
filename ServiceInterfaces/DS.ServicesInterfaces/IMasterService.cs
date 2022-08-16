@@ -28,7 +28,7 @@ namespace DS.ServicesInterfaces
         /// 
         /// </summary>
         /// <returns></returns>
-        Task<ServiceResponse> AddProfile();
+        Task<ServiceResponse> AddProfile(AddProfileRequest request, string createdBy);
         /// <summary>
         /// 
         /// </summary>
@@ -36,5 +36,31 @@ namespace DS.ServicesInterfaces
         /// <param name="userName"></param>
         /// <returns></returns>
         Task<ServiceResponse> GetProfileList(string searchField, string userName);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        Task<ServiceResponse> UpdateProfile(UpdateProfileRequest request, string userName);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        Task<ServiceResponse> AddEmployee(AddEmployeeRequest request, string cretedBy);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="searchField"></param>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        Task<ServiceResponse> GetEmployeeList(string searchField, string userName);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        Task<ServiceResponse> UpdateEmployee(UpdateEmpoyeeRequest request, string userName);
     }
 }

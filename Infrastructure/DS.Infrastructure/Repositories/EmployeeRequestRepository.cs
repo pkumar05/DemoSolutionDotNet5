@@ -6,7 +6,7 @@ using PK.BuildingBlocks.Repository;
 
 namespace DS.Infrastructure.SQL.Repositories
 {
-    public class EmployeeRequestRepository : RepositoryEF<Employee>, IEmployeeRequestRepos
+    public class EmployeeRequestRepository : RepositoryEF<Employees>, IEmployeeRequestRepos
     {
         private readonly DADBContext _dbContext;
         public IConfiguration _configuration;
