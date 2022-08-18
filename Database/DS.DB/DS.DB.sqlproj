@@ -61,6 +61,7 @@
     <Folder Include="DS\" />
     <Folder Include="DS\Tables\" />
     <Folder Include="Security\" />
+    <Folder Include="Scripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="DS\Tables\Employee.sql" />
@@ -68,5 +69,6 @@
     <Build Include="DS\Tables\Profile.sql" />
     <Build Include="DS\Tables\EmployeeProfile.sql" />
     <Build Include="Security\DS.sql" />
+    <Build Include="Scripts\DatabaseGenerationScript.sql" />
   </ItemGroup>
 </Project>

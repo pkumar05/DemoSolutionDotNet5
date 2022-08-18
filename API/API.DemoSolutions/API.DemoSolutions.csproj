@@ -5,6 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="logs20220810.txt" />
+    <None Remove="logs20220811.txt" />
+    <None Remove="logs20220812.txt" />
+    <None Remove="logs20220815.txt" />
+    <None Remove="logs20220816.txt" />
+    <None Remove="logs20220818.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.17" />
